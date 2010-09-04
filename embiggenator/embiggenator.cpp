@@ -2,10 +2,14 @@
 #include <algorithm>
 #include <iostream>
 
+/*
 #include <boost/python/operators.hpp>
 #include <boost/python/class.hpp>
 #include <boost/python/module.hpp>
 #include <boost/python/def.hpp>
+*/
+
+#include <boost/python.hpp>
 
 struct embiggenator {
 
@@ -38,5 +42,5 @@ BOOST_PYTHON_MODULE(embiggenator)
     class_<embiggenator>("embiggenator", init<optional<std::string> >())
         .def("set", &embiggenator::set)
         .def("get", &embiggenator::get)
-        .def(str(self));
+        .def(self_ns::str(self));
 }
