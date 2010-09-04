@@ -1,0 +1,4 @@
+This repo is simply a sandbox for playing around with - and in some
+cases, working around bugs in - boost python.
+All examples within are under MIT license. They're quite contrived,
+but hopefully simple to follow.
